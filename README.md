@@ -42,7 +42,36 @@ POST /webhook
 
 ### Example request:
 
-```json
 {
   "message": "I was charged twice"
 }
+
+### Example response:
+
+{
+  "message": "I was charged twice",
+  "category": "Billing Issue",
+  "action": "Escalate to billing team",
+  "status": "processed"
+}
+
+---
+
+## ⚙️ How to run locally
+
+pip install flask  
+python main.py  
+
+---
+
+## 📌 Notes
+
+This project is part of my transition into the tech industry, focusing on technical support, automation, and system integration.
+
+---
+
+## 👤 Author
+
+Matheus Bueno
+
+- LinkedIn: https://www.linkedin.com/in/eng-matheusbueno/
