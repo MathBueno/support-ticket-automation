@@ -59,7 +59,7 @@ POST /webhook
 
 ## ⚙️ How to run locally
 
-pip install flask  
+pip install -r requirements.txt 
 python main.py  
 
 ---
