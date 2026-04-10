@@ -1,77 +1,46 @@
-# Support Ticket Automation API
+# 🎫 Support Ticket Automation API
 
-This project simulates a real-world technical support system using a simple API.
+A REST API that simulates a real-world technical support pipeline — automatically classifying incoming tickets, defining the next best action, and logging interactions. Built to demonstrate skills in backend automation, webhook handling, and support engineering workflows.
 
-It receives customer messages, classifies the issue, decides the appropriate action, and logs the interaction.
+## 🧩 The Problem
+Support teams often receive hundreds of messages daily. Without an automated triage system, tickets are manually read, categorized, and routed, which leads to slow response times and workflow bottlenecks.
 
----
+## ✅ The Solution
+This API receives a support message via webhook, automatically classifies it into a specific category (e.g., Billing, Technical), determines the appropriate action, and stores the event for tracking.
 
-## 🚀 Features
+## ⚙️ Tech Stack
+- **Python / Flask** — Core logic and REST API framework
+- **JSON** — Data payload formatting
+- **File Logging** — Persistent ticket tracking
 
-- Ticket classification (Billing, Technical, Account, General)
-- Automated decision-making
-- Log storage for support tracking
-- REST API with webhook endpoint
-- JSON request/response handling
+## 📬 API Endpoint Example
 
----
+**POST** `/webhook`
 
-## 🧠 What this project demonstrates
-
-- API development with Flask
-- Handling HTTP requests (POST)
-- Working with JSON data
-- Basic automation logic
-- Logging and traceability
-- Error handling
-
----
-
-## 🔧 Tech Stack
-
-- Python
-- Flask
-- JSON
-- File logging
-
----
-
-## 📡 API Endpoint
-
-POST /webhook
-
-### Example request:
-
+**Request:**
+```json
 {
-  "message": "I was charged twice"
+  "message": "I was charged twice for my subscription this month"
 }
+```
 
-### Example response:
-
+**Response:**
+```json
 {
-  "message": "I was charged twice",
+  "message": "I was charged twice for my subscription this month",
   "category": "Billing Issue",
   "action": "Escalate to billing team",
   "status": "processed"
 }
+```
 
----
+## 🚀 How to Run Locally
+1. Clone the repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the application: `python main.py`
+4. Send a POST request to `http://localhost:5000/webhook`
 
-## ⚙️ How to run locally
-
-pip install -r requirements.txt 
-python main.py  
-
----
-
-## 📌 Notes
-
-This project is part of my transition into the tech industry, focusing on technical support, automation, and system integration.
-
----
-
-## 👤 Author
-
-Matheus Bueno
-
-- LinkedIn: https://www.linkedin.com/in/eng-matheusbueno/
+## 💼 Skills Demonstrated
+- REST API design and webhook handling
+- Automated classification logic
+- Real-world support engineering simulation
