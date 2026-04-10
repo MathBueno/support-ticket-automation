@@ -1,1 +1,48 @@
-# support-ticket-automation
+# Support Ticket Automation API
+
+This project simulates a real-world technical support system using a simple API.
+
+It receives customer messages, classifies the issue, decides the appropriate action, and logs the interaction.
+
+---
+
+## 🚀 Features
+
+- Ticket classification (Billing, Technical, Account, General)
+- Automated decision-making
+- Log storage for support tracking
+- REST API with webhook endpoint
+- JSON request/response handling
+
+---
+
+## 🧠 What this project demonstrates
+
+- API development with Flask
+- Handling HTTP requests (POST)
+- Working with JSON data
+- Basic automation logic
+- Logging and traceability
+- Error handling
+
+---
+
+## 🔧 Tech Stack
+
+- Python
+- Flask
+- JSON
+- File logging
+
+---
+
+## 📡 API Endpoint
+
+POST /webhook
+
+### Example request:
+
+```json
+{
+  "message": "I was charged twice"
+}
